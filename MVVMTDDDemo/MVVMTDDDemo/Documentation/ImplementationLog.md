@@ -14,12 +14,16 @@
 - [x] Create User model
 - [x] Define UsersRepository protocol
 - [x] Implement MockUsersRepository
-- [ ] Verify target membership
-- [ ] Verify test compilation
-- [ ] Execute first ViewModel test
-
+- [x] Verify target membership
+- [x] Verify test compilation
+- [x] Execute first ViewModel test
 
 ## Step 4: ViewModel Implementation
-- [ ] Implement UsersViewModel
-- [ ] Pass success test
-- [ ] Refactor
+- [x] Implement UsersViewModel
+- [x] Inject UsersRepository through initializer
+- [x] Implement async fetchUsers()
+- [x] Implement loading state
+- [x] Implement error state
+- [x] Pass successful fetch test
+- [ ] Refactor and review
+

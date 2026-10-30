@@ -19,14 +19,18 @@ final class UsersViewModelTests: XCTestCase {
         let repository = MockUsersRepository(users: expectedUsers)
         let viewModel = UsersViewModel(repository: repository)
         
+        // Verify inital state
+        XCTAssertTrue(viewModel.users.isEmpty)
+        XCTAssertFalse(viewModel.isLoading)
+        XCTAssertNil(viewModel.errorMessage)
+        
         //When
         await viewModel.fetchUsers()
         
         //Then
-        XCTAssertEqual(viewModel.users.count, 2)
-        XCTAssertEqual(viewModel.users[0].name, "John Doe")
-        XCTAssertEqual(viewModel.users[1].name, "Jane Smith")
+        XCTAssertEqual(viewModel.users, expectedUsers)
         XCTAssertFalse(viewModel.isLoading)
+        XCTAssertNil(viewModel.errorMessage)
         XCTAssertTrue(repository.fetchUsersCalled)
     }
 }
