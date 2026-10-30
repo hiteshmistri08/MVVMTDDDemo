@@ -18,6 +18,24 @@
 - Mock dependencies: MockUsersRepository
 - Test type: ViewModel unit tests
 
+### Test Dependencies
+
+| Dependency | Implementation | Purpose |
+|---|---|---|
+| User | User.swift | Represents user data |
+| UsersRepository | Protocol | Defines the data-fetching contract |
+| UsersRepository | MockUsersRepository.swift | Provides predefined users without network calls |
+
+### Requirement-to-Test Mapping
+
+| Requirement ID | Test Case | Status |
+|---|---|---|
+| FR-001 | test_fetchUsers_whenRepositoryReturnsUsers_publishesUsers | Pending execution |
+
 ## Status
 
-Pending implementation and test execution.
+- [x] User model created
+- [x] UsersRepository protocol created
+- [x] MockUsersRepository created
+- [ ] ViewModel unit test executed
+

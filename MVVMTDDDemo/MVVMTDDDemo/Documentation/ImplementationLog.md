@@ -8,13 +8,16 @@
 ## Step 2: First ViewModel Test
 - [x] Define FR-001
 - [x] Write initial ViewModel test
-- [ ] Verify expected Red phase
+- [x] Verify expected Red phase
 
 ## Step 3: User Model and Mock Repository
-- [ ] Create User model
-- [ ] Define UsersRepository protocol
-- [ ] Implement MockUsersRepository
-- [ ] Run initial test
+- [x] Create User model
+- [x] Define UsersRepository protocol
+- [x] Implement MockUsersRepository
+- [ ] Verify target membership
+- [ ] Verify test compilation
+- [ ] Execute first ViewModel test
+
 
 ## Step 4: ViewModel Implementation
 - [ ] Implement UsersViewModel
