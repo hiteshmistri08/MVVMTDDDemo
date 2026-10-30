@@ -30,7 +30,10 @@
 
 | Requirement ID | Test Case | Status |
 |---|---|---|
-| FR-001 | test_fetchUsers_whenRepositoryReturnsUsers_publishesUsers | Pending execution |
+| FR-001 | test_fetchUsers_whenRepositoryReturnsUsers_publishesUsers | Passed |
+| FR-002| test_fetchUsers_whenRepositoryReturnsEmptyUsers_keepsUsersEmpty| Pending |
+| FR-003 |  test_fetchUsers_whenRepositoryFails_setsErrorMessage|  Pending|
+| FR-004 | test_fetchUsers_whenRequestIsInProgress_setsLoadingTrue | Pending |
 
 ## Status
 

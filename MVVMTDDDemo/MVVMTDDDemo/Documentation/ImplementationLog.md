@@ -25,5 +25,13 @@
 - [x] Implement loading state
 - [x] Implement error state
 - [x] Pass successful fetch test
-- [ ] Refactor and review
+- [x] Refactor and review
+
+## Step 5: ViewModel Edge Case Testing
+- [x] Extend MockUsersRepository
+- [x] Test empty response
+- [x] Test repository failure
+- [x] Test loading state
+- [ ] Verify all four tests pass
+
 

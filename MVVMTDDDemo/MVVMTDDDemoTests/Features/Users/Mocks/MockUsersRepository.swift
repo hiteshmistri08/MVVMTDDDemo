@@ -9,15 +9,32 @@ import Foundation
 @testable import MVVMTDDDemo
 
 final class MockUsersRepository: UsersRepository {
-    private let users: [User]
+    enum MockError: Error {
+        case failedToFetch
+    }
+    
+    private let result: Result<[User], Error>
+    private let delayNanoseconds: UInt64
+    
     private(set) var fetchUsersCalled: Bool = false
     
-    init(users: [User]) {
-        self.users = users
+    init(users: [User] = [], error: Error? = nil, delayNanoseconds: UInt64 = 0) {
+        if let error {
+            self.result = .failure(error)
+        } else {
+            self.result = .success(users)
+        }
+        
+        self.delayNanoseconds = delayNanoseconds
     }
     
     func fetchUsers() async throws -> [User] {
         fetchUsersCalled = true
-        return users
+        
+        if delayNanoseconds > 0 {
+            try await Task.sleep(nanoseconds: delayNanoseconds)
+        }
+        
+        return try result.get()
     }
 }

@@ -24,7 +24,7 @@ When the User Directory screen loads, the ViewModel should request users from th
 
 `test_fetchUsers_whenRepositoryReturnsUsers_publishesUsers`
 
-**Implementation Status:** In Progress
+**Implementation Status:** Done
 
 **TDD Status:** Green — Test written; production implementation pending.
 
@@ -38,7 +38,7 @@ When the repository returns an empty user collection, the ViewModel should publi
 2. Loading should become false.
 3. Error message should remain nil.
 
-**Implementation Status:** In Progress
+**Implementation Status:** Done
 
 ---
 
